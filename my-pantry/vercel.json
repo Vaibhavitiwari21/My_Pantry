@@ -2,22 +2,22 @@
   "version": 2,
   "builds": [
     {
-      "src": "my-pantry/package.json",
-      "use": "@vercel/next"
-    },
-    {
       "src": "app/backend.py",
       "use": "@vercel/python"
+    },
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/backend/backend.py"
+      "dest": "/app/backend.py"
     },
     {
       "src": "/(.*)",
-      "dest": "/frontend/$1"
+      "dest": "/$1"
     }
   ]
 }
