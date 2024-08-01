@@ -38,4 +38,4 @@ def generate_recipe():
         return jsonify({"error": "Recipe generator model is not available."}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5001)
+    app.run(debug=True)
