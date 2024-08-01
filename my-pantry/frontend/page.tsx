@@ -5,7 +5,7 @@ import { Box, Stack, Typography, Button, TextField, IconButton, Tabs, Tab, Grid 
 import { DatePicker, LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { collection, addDoc, deleteDoc, doc, onSnapshot, updateDoc, query, where, getDoc, getDocs } from 'firebase/firestore';
-import { db } from '../app/firebase';
+import { db } from './firebase';
 import DeleteIcon from '@mui/icons-material/Delete';
 import dayjs from 'dayjs';
 import axios from 'axios';
