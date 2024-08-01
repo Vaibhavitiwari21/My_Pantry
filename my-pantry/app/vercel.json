@@ -2,14 +2,22 @@
     "version": 2,
     "builds": [
       {
-        "src": "app.py",
+        "src": "nextjs/package.json",
+        "use": "@vercel/next"
+      },
+      {
+        "src": "api/app.py",
         "use": "@vercel/python"
       }
     ],
     "routes": [
       {
+        "src": "/api/(.*)",
+        "dest": "/api/app.py"
+      },
+      {
         "src": "/(.*)",
-        "dest": "app.py"
+        "dest": "/nextjs/$1"
       }
     ]
   }
